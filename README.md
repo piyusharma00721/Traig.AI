@@ -88,3 +88,20 @@ Follow these steps to set up the project locally.
 
 6.  **Access the App:**
     Open your browser and navigate to `http://localhost:8000` (or the port specified in the terminal).
+
+## Deployment
+
+This application is ready to be deployed on **Render** (or any platform using Docker/Procfile).
+
+1.  **Push to GitHub**: Ensure your code is in a GitHub repository.
+2.  **Create Web Service on Render**:
+    -   Go to [dashboard.render.com](https://dashboard.render.com/).
+    -   Click **New +** -> **Web Service**.
+    -   Connect your GitHub repository.
+3.  **Configure**:
+    -   **Runtime**: Python 3
+    -   **Build Command**: `pip install -r requirements.txt`
+    -   **Start Command**: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+    -   **Environment Variables**: Add any sensitive env vars from your `.env` file (e.g., `GOOGLE_API_KEY`).
+4.  **Deploy**: Click **Create Web Service**.
+

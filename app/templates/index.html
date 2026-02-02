@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daig AI | Intelligent Health Analysis</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Daig AI</h1>
+            <p class="subtitle">Advanced Medical Report Analysis & Visualization</p>
+        </header>
+
+        <section class="upload-area" id="dropZone">
+            <div class="upload-icon">📄</div>
+            <div class="upload-text">Drag & Drop your Lab Report here</div>
+            <div class="upload-subtext">or click to browse (Images only)</div>
+            <input type="file" id="fileInput" accept="image/*">
+        </section>
+
+        <div class="loader" id="loader"></div>
+
+        <main class="results-container" id="results">
+            <div class="card">
+                <h2>📊 Executive Summary</h2>
+                <div id="summaryContent" class="summary-text"></div>
+            </div>
+
+            <div class="card">
+                <h2>💡 Health Suggestions</h2>
+                <div id="suggestionsContent" class="summary-text"></div>
+            </div>
+
+            <div class="card">
+                <h2>📈 Health Visualization</h2>
+                <div style="position: relative; height: 300px; width: 100%;">
+                    <canvas id="healthChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>🧬 Detailed Findings</h2>
+                <div class="data-table-wrapper">
+                    <table id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>Test Parameter</th>
+                                <th>Result</th>
+                                <th>Reference Range</th>
+                                <th>Status</th>
+                                <th>Impact & Advice</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Rows injected by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card" style="text-align: center; background: transparent; box-shadow: none;">
+                <button onclick="window.print()"
+                    style="padding: 10px 20px; background: var(--primary); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Print
+                    Report</button>
+            </div>
+        </main>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>

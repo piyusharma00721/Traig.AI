@@ -1,7 +1,7 @@
 
-# Daig AI
+# Traig.AI
 
-Daig AI is an intelligent health agent designed to empower users by analyzing their medical reports. In its first phase, it focuses on **Complete Blood Count (CBC)** reports, providing clear, AI-driven insights, executive summaries, and personalized health suggestions to improve overall well-being.
+Traig.AI is an intelligent health agent designed to empower users by analyzing their medical reports. In its first phase, it focuses on **Complete Blood Count (CBC)** reports, providing clear, AI-driven insights, executive summaries, and personalized health suggestions to improve overall well-being.
 
 ## Features
 

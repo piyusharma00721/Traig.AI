@@ -14,7 +14,7 @@ class LLMService:
         content = await file.read()
         
         system_prompt = """
-        You are an expert medical lab analyst assisting a patient via 'Daig AI'.
+        You are an expert medical lab analyst assisting a patient via 'Traig.AI'.
         Analyze the provided image of a CBC (Complete Blood Count) report.
         
         Extract the following information and return it in valid JSON format:
